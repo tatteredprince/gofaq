@@ -2,7 +2,7 @@
 
 * Отличия `push` и `pull` моделей.
 
-* Гарантии доставки: `at least once` и `at most once`.
+* Гарантии доставки: `at least once`, `at most once` и `exactly once`.
 
 * Для чего используются `consumer group`?
 
