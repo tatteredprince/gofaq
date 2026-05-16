@@ -78,3 +78,31 @@ func handle() error {
   ...
 }
 ```
+
+### Как использование инструкции `go` связано с гонкой за ресурсы?
+```go
+var wg sync.WaitGroup
+wg.Add(5)
+var i int
+for i = 0; i < 5; i++ {
+	go func() {
+		fmt.Println(i)
+		wg.Done()
+	}()
+}
+wg.Wait()
+```
+
+### Инструкция `go` сразу начинает исполнение горутин?
+```go
+var wg sync.WaitGroup
+wg.Add(5)
+var i int
+for i = 0; i < 5; i++ {
+	go func(j int) {
+		fmt.Println(j)
+		wg.Done()
+	}(i)
+}
+wg.Wait()
+```
