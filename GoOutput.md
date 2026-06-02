@@ -11,14 +11,13 @@ fmt.Println(str)
 
 ## Слайсы и массивы
 
-### Как работает `append()` "под капотом"?
 ```go
 x := []int{}
 x = append(x, 0)
 x = append(x, 1)
-x = append(x, 2)
-y := append(x, 3)
-z := append(x, 4)
+x = append(x, 2)     // какой размер внутреннего массива?
+y := append(x, 3)    // при добавлении элемента происходит аллокация нового массива?
+z := append(x, 4)    // как изменяются len(x) и cap(x)?
 fmt.Println(y, z)
 ```
 
