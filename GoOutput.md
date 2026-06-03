@@ -9,7 +9,7 @@ str[0] = "R"              // в Go можно менять строки?
 fmt.Println(str)
 ```
 
-## Слайсы и массивы
+## Слайсы
 
 ```go
 x := []int{}
@@ -50,30 +50,6 @@ a3 := append(a1, 7)                         // append создает новый 
 fmt.Println(a1, a2, a3)                     // в чем отличия len(a1) от len(a2) и len(a3)?
 ```
 
-### Итерация по значению массива.
-```go
-a, b := [...]int{1, 2, 3}, [3]int{0: 4, 5, 2: 6}
-for i, v := range a {
-	if i == 1 {
-		a = b
-	}
-	fmt.Println(v)
-}
-fmt.Println(a, b)
-```
-
-### Итерация по ссылке на массив, `range` возвращает индекс и копию элемента массива?
-```go
-a, b := [3]int{1, 2, 3}, [3]int{4, 5, 6}
-for i, v := range &a {
-	if i == 1 {
-		a = b
-	}
-	fmt.Println(v)
-}
-fmt.Println(a, b)
-```
-
 ```go
 first := []int{1, 2, 3, 4, 5}
 second := make([]*int, len(first))
@@ -83,6 +59,30 @@ for i, v := range first {    // итератор range возвращает ко
 }
 fmt.Println(first)
 fmt.Println(*second[0], *second[1], *second[2], *second[3], *second[4])
+```
+
+## Массивы
+
+```go
+a, b := [...]int{1, 2, 3}, [3]int{0: 4, 5, 2: 6}
+for i, v := range a {    // итератор range возвращает копии или оригиналы объектов?
+	if i == 1 {
+		a = b
+	}
+	fmt.Println(v)
+}
+fmt.Println(a, b)
+```
+
+```go
+a, b := [3]int{1, 2, 3}, [3]int{4, 5, 6}
+for i, v := range &a {    // итератор range по ссылке на массив возвращает копии или оригиналы объектов?
+	if i == 1 {
+		a = b
+	}
+	fmt.Println(v)
+}
+fmt.Println(a, b)
 ```
 
 ## Интерфейсы
