@@ -76,18 +76,15 @@ fmt.Println(a)
 fmt.Println(b)
 ```
 
-### Почему модификация второго слайса не изменяет содержимое первого?
 ```go
-func main() {
-	first := []int{10, 20, 30, 40, 50}
-	second := make([]*int, len(first))
-	for i, v := range first {
-		second[i] = &v
-		*second[i] *= 10
-	}
-	fmt.Println(first)
-	fmt.Println(*second[0], *second[1], *second[2], *second[3], *second[4])
+first := []int{1, 2, 3, 4, 5}
+second := make([]*int, len(first))
+for i, v := range first {    // итератор range возвращает копии или оригиналы объектов?
+	second[i] = &v           // куда ссылаются элементы слайса?
+	*second[i] *= 10
 }
+fmt.Println(first)
+fmt.Println(*second[0], *second[1], *second[2], *second[3], *second[4])
 ```
 
 ## Интерфейсы
