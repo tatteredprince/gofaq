@@ -59,8 +59,7 @@ for i, v := range a {
 	}
 	fmt.Println(v)
 }
-fmt.Println(a)
-fmt.Println(b)
+fmt.Println(a, b)
 ```
 
 ### Итерация по ссылке на массив, `range` возвращает индекс и копию элемента массива?
@@ -72,8 +71,7 @@ for i, v := range &a {
 	}
 	fmt.Println(v)
 }
-fmt.Println(a)
-fmt.Println(b)
+fmt.Println(a, b)
 ```
 
 ```go
