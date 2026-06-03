@@ -64,13 +64,13 @@ fmt.Println(*second[0], *second[1], *second[2], *second[3], *second[4])
 ```go
 func modify(s []int) {
 	s[0] *= 2
-	s = append(s, 7)      // происходит ли overshadowing переданной переменной?
+	s = append(s, 7)      // происходит ли shadowing переданной переменной?
 	s[1] /= 2
 }
 
 func modifyp(s *[]int) {
 	(*s)[0] *= 2
-	*s = append(*s, 7)     // происходит ли overshadowing переданной переменной?
+	*s = append(*s, 7)     // происходит ли shadowing переданной переменной?
 	(*s)[1] /= 2
 }
 
