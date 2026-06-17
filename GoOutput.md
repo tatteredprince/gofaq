@@ -151,6 +151,38 @@ func deduce(v any) {  // какой тип соответствует интер
 }
 ```
 
+```go
+type CustomError string
+
+func (e CustomError) Error() string {  // что выведется если не определять этот метод?
+	return string(e)
+}
+
+func customError() error {   // какой тип возвращаемого значения?
+	var err *CustomError     // какой тип у локальной переменной?
+	fmt.Println(err == nil)
+	return err
+}
+
+func simpleError() error {
+	var err error
+	fmt.Println(err == nil)  // когда переменная типа интерфейс error равна nil?
+	return err
+}
+
+func newError() error {
+	err := errors.New("new error")
+	fmt.Println(err == nil)
+	return err
+}
+
+func main() {
+	fmt.Println(customError() == nil)
+	fmt.Println(simpleError() == nil)
+	fmt.Println(newError() == nil)
+}
+```
+
 ## Горутины
 
 ```go
