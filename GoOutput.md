@@ -166,7 +166,7 @@ func customError() error {   // какой тип возвращаемого з�
 
 func simpleError() error {
 	var err error
-	fmt.Println(err == nil)  // когда переменная типа интерфейс error равна nil?
+	fmt.Println(err == nil)  // когда переменная типа error равна nil?
 	return err
 }
 
