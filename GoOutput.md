@@ -161,7 +161,7 @@ func (e CustomError) Error() string {  // что выведется если н�
 func customError() error {   // какой тип возвращаемого значения?
 	var err *CustomError     // какой тип у локальной переменной?
 	fmt.Println(err == nil)
-	return err
+	return err               // какой внутренний тип у возвращаемого объекта типа error? 
 }
 
 func simpleError() error {
