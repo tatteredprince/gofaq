@@ -92,7 +92,7 @@ func main() {
 }
 ```
 
-```
+```go
 var s []int                     // чему равен указатель внутреннего массива слайса?
 fmt.Println(s, len(s), cap(s))
 for _, v := range s {
@@ -100,11 +100,11 @@ for _, v := range s {
 }
 ```
 
-```
+```go
 _ = make([]int, -5)
 ```
 
-```
+```go
 size := -5
 _ = make([]int, size)
 ```
