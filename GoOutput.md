@@ -212,7 +212,7 @@ func main() {
 }
 ```
 
-## Горутины
+## Горутины и каналы
 
 ```go
 var wg sync.WaitGroup
@@ -240,7 +240,19 @@ for i = 0; i < 5; i++ {
 wg.Wait()
 ```
 
-## Каналы
+```go
+worker := func() chan int {
+	ch := make(chan int)
+	go func() {
+		time.Sleep(3 * time.Second)
+		ch <- 1
+	}()
+	return ch
+}
+t := time.Now()
+_, _ = <-worker(), <-worker()
+fmt.Println(int(time.Since(t).Seconds()))
+```
 
 ```go
 ch := make(chan int, 1)
