@@ -133,6 +133,18 @@ for i, v := range &a {  // итератор range по ссылке на мас�
 fmt.Println(a, b)
 ```
 
+## Map
+
+```go
+type User struct {
+	Name string
+}
+m1 := map[string]*User{"": {}}
+m1[""].Name = "John"
+m2 := map[string]User{"": {}}
+m2[""].Name = "Kevin"
+```
+
 ## Интерфейсы
 
 ```go
@@ -226,6 +238,19 @@ for i = 0; i < 5; i++ {
 	}(i)                  // какое значение передается в функцию при каждой итерации?
 }
 wg.Wait()
+```
+
+## Каналы
+
+```go
+ch := make(chan int, 1)
+for i := range 10 {
+	select {
+	case ch <- i:
+	case num := <-ch:
+		fmt.Println(num)
+	}
+}
 ```
 
 ## Структуры
