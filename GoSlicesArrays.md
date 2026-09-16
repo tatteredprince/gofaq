@@ -35,7 +35,7 @@ fmt.Println(x, y, z)  // на какой массив ссылаются заг�
 x := []int{1, 2, 3, 4, 5}
 var y []int
 y = append(x, 6)   // происходит ли реаллокация массива слайса x?
-y = append(x, 7)
+y = append(x, 7)   // изменяются ли len и cap слайса x?
 x = y              // на какой массив ссылается слайс x, и какие у него len и cap? 
 y = append(x, 8)
 fmt.Println(x, y)
