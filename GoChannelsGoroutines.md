@@ -78,6 +78,18 @@ wg.Wait()
 ```
 
 ```go
+wg := sync.WaitGroup{}
+for i := range 5 {
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		fmt.Println(i)
+	}()
+	wg.Wait()
+}
+```
+
+```go
 worker := func() chan int {
 	ch := make(chan int)
 	go func() {
