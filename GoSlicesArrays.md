@@ -37,7 +37,7 @@ var y []int
 y = append(x, 6)   // происходит ли реаллокация массива слайса x?
 y = append(x, 7)   // изменяются ли len и cap слайса x?
 x = y              // на какой массив ссылается слайс x, и какие у него len и cap? 
-y = append(x, 8)
+y = append(x, 8)   // как меняются len и cap у слайса x?
 fmt.Println(x, y)
 ```
 
