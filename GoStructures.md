@@ -8,6 +8,33 @@
 \
 Как обновить значения полей объекта в одной строкой?
 
-<details>
-  <summary><h3>Что выведет код?</summary>
+<details open>
+  <summary><h3>Что выведет код?</h3></summary>
+
+```go
+type A struct {  // какой физический и фактический размеры структуры?
+	a bool
+	b int32 
+	c float64
+}
+
+type B struct {  // сумма размеров полей равна фактическому размеру структуры?
+	c float64
+	b int32
+	a bool
+}
+
+type C struct {  // как эффективно организовать поля чтобы уменьшить фактический размер структур в памяти?
+	a bool
+	c float64
+	b int32
+}
+
+func main() {
+	println(unsafe.Sizeof(A{}))
+	println(unsafe.Sizeof(B{}))
+	println(unsafe.Sizeof(C{}))
+}
+```
+
 </details>
