@@ -17,7 +17,7 @@
 Как создать многомерный слайс?
 
 <details open>
-	<summary><h3>Слайсы: что выведет код?</h3></summary><br>
+	<summary><h3>Что выведет код?</h3></summary><br>
 
 ```go
 x := []int{}
@@ -118,11 +118,6 @@ _ = make([]int, -5)
 size := -5
 _ = make([]int, size)
 ```
-
-</details>
-
-<details open>
-	<summary><h3>Массивы: что выведет код?</h3></summary><br>
 
 ```go
 a, b := [...]int{1, 2, 3}, [3]int{0: 4, 5, 2: 6}
