@@ -13,7 +13,7 @@
 Как узнать внутренний тип переменной типа пустой интерфейс?
 
 <details open>
-<summary><h2>Что выведет код?</h2></summary>
+<summary><h3>Что выведет код?</h3></summary>
 
 ```go
 var err error
