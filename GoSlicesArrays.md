@@ -82,6 +82,32 @@ fmt.Println(*second[0], *second[1], *second[2], *second[3], *second[4])
 ```
 
 ```go
+a := []int{1}
+
+func(s []int) {  // переменные передаются по ссылке или по значению?
+	s[0]++       // копируется заголовок слайса или весь слайс?
+}(a)
+fmt.Println(a)
+
+func(s []int) {
+	s = append(s, 10)  // происходит ли затемнение переданной переменной
+	s[0]++
+}(a)
+fmt.Println(a)
+
+func(s *[]int) {  // скопированная ссылка указывает на оригинальный заголовок слайса?
+	(*s)[0]++
+}(&a)
+fmt.Println(a)
+
+func(s *[]int) {
+	*s = append(*s, 10)
+	(*s)[0]++
+}(&a)
+fmt.Println(a)
+```
+
+```go
 func modify(s []int) {
 	s[0] *= 2
 	s = append(s, 7)    // происходит ли shadowing переданной переменной?
