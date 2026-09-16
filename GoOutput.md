@@ -133,18 +133,6 @@ for i, v := range &a {  // итератор range по ссылке на мас�
 fmt.Println(a, b)
 ```
 
-## Map
-
-```go
-type User struct {
-	Name string
-}
-m1 := map[string]*User{"": {}}
-m1[""].Name = "John"
-m2 := map[string]User{"": {}}
-m2[""].Name = "Kevin"
-```
-
 ## Горутины и каналы
 
 ```go
