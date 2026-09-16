@@ -64,10 +64,10 @@ fmt.Println(x, y)
 
 ```go
 a1 := make([]int, 0, 10)
-a1 = append(a1, []int{1, 2, 3, 4, 5}...)  // cap(a1) хватит для добавляемых элементов?
-a2 := append(a1, 6)                       // производится аллокация нового массива слайса?
-a3 := append(a1, 7)                       // append создает новый slice header?
-fmt.Println(a1, a2, a3)                   // в чем отличия len(a1) от len(a2) и len(a3)?
+a1 = append(a1, []int{1, 2, 3, 4, 5}...)
+a2 := append(a1, 6)                       // происходит ли реаллокация нового массива слайса a1?
+a3 := append(a1, 7)                       // append увеличивает оригинальный len слайса a1?
+fmt.Println(a1, a2, a3)
 ```
 
 ```go
