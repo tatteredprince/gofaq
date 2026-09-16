@@ -65,8 +65,8 @@ fmt.Println(x, y)
 ```go
 a1 := make([]int, 0, 10)
 a1 = append(a1, []int{1, 2, 3, 4, 5}...)
-a2 := append(a1, 6)                       // происходит ли реаллокация нового массива слайса a1?
-a3 := append(a1, 7)                       // append здесь изменяет len и cap слайса a1?
+a2 := append(a1, 6)      // происходит ли реаллокация нового массива слайса a1?
+a3 := append(a1, 7)      // append здесь изменяет len и cap слайса a1?
 fmt.Println(a1, a2, a3)
 ```
 
