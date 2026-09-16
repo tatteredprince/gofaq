@@ -10,13 +10,10 @@
   <summary><h2>Что выведет код?</h2></summary>
 
 ```go
-type User struct {
-	Name string
-}
-m1 := map[string]*User{"": {}}
-m1[""].Name = "John"
-m2 := map[string]User{"": {}}
-m2[""].Name = "Kevin"
+str := "Hello, world!"
+fmt.Println(str[0]) 
+str[0] = "R"            // в Go можно менять строки?
+fmt.Println(str)
 ```
 
 </details>
