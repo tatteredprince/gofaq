@@ -16,10 +16,8 @@
 \
 Что происходит с `capacity` слайса и базовым массивом после добавления элементов через `append()`?
 
-<br>
-
 <details open>
-	<summary>Слайсы: что выведет код?</summary><br>
+	<summary><h3>Слайсы: что выведет код?</h3></summary><br>
 
 ```go
 x := []int{}
@@ -121,10 +119,8 @@ _ = make([]int, size)
 
 </details>
 
-<br>
-
 <details open>
-	<summary>Массивы: что выведет код?</summary><br>
+	<summary><h3>Массивы: что выведет код?</h3></summary><br>
 
 ```go
 a, b := [...]int{1, 2, 3}, [3]int{0: 4, 5, 2: 6}
