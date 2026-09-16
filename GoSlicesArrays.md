@@ -27,7 +27,7 @@ x = append(x, 2)      // какие len и cap у слайса x?
 y := append(x, 3)     // происходит ли реаллокация массива слайса x? 
 z := append(x, 4)     // меняются ли len и cap у слайса x?
 fmt.Println(x, y, z)
-x = append(x, 5)      // у слайса x достаточный cap?
+x = append(x, 5)      // как меняются len и cap у слайса x?
 fmt.Println(x, y, z)  // на какой массив ссылаются заголовки слайсов y и z?
 ```
 
