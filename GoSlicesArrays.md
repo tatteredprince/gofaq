@@ -24,9 +24,9 @@ x := []int{}
 x = append(x, 0)
 x = append(x, 1)
 x = append(x, 2)      // какие len и cap у слайса x?
-y := append(x, 3)     // для добавления хватает cap в слайсе x?
-z := append(x, 4)     // происходит ли реаллокация массива слайса x? 
-fmt.Println(x, y, z)  // меняется ли len у слайса x?
+y := append(x, 3)     // происходит ли реаллокация массива слайса x? 
+z := append(x, 4)     // меняются ли len и cap у слайса x?
+fmt.Println(x, y, z)
 x = append(x, 5)      // у слайса x достаточный cap?
 fmt.Println(x, y, z)  // на какой массив ссылаются заголовки слайсов y и z?
 ```
