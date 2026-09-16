@@ -1,4 +1,4 @@
-# Go Backend Frequently Asked Interview Questions
+# Go Frequently Asked Interview Questions
 
 [Общие вопросы Go](Go.md)
 
