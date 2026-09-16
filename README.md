@@ -1,4 +1,4 @@
-# Go Frequently Asked Interview Questions
+# Go Interview Frequently Asked Questions
 
 [Общие вопросы Go](Go.md)
 
