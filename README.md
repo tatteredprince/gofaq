@@ -1,23 +1,23 @@
 # Go Backend Frequently Asked Interview Questions
 
-[Go: язык программирования](Go.md)
+[Общие вопросы Go](Go.md)
 
-[Что выведет программа?](GoOutput.md)
+[Каналы и горутины Go](GoChannelsGoroutines.md)
 
-[Дизайн и проектирование программ](Design.md)
+[Контексты в Go](GoContext.md)
 
-[Протоколы сетевого уровня](Network.md)
+[Функции в Go](GoFunctions.md)
 
-[HTTP: протокол прикладного уровня](HTTP.md)
+[Интерфейсы в Go](GoInterfaces.md)
 
-[DNS: вычисление адресов доменов](DNS.md)
+[Map в Go](GoMaps.md)
 
-[Git: управление исходным кодом](Git.md)
+[Управление памятью в Go](GoMemory.md)
 
-[Linux для разработчиков](Linux.md)
+[Производительность в Go](GoPerformance.md)
 
-[PostgreSQL: реляционная база данных](PostgreSQL.md)
+[Слайсы и массивы в Go](GoSlicesArrays.md)
 
-[Kafka: брокер сообщений](Kafka.md)
+[Строки в Go](GoStrings.md)
 
-[Redis: key-value база данных](Redis.md)
+[Структуры в Go](GoStructures.md)
