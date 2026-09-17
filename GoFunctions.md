@@ -46,6 +46,23 @@ fmt.Println("Ending")
 
 ```go
 defer fmt.Println("Deferred one")
+defer fmt.Println("Deferred two")
+fmt.Println("Starting")
+go func() {
+  defer func() {
+    if r := recover(); r != nil {
+      fmt.Println("Recovered from panic, message:", r)
+    } else {
+      fmt.Println("Recovered from panic")
+    }
+  }()
+  panic("golang is dead")
+}()
+fmt.Println("Ending")
+```
+
+```go
+defer fmt.Println("Deferred one")
 defer func() {
   if r := recover(); r != nil {
     fmt.Println("Recovered from panic, message:", r)
