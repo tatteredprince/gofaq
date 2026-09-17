@@ -16,6 +16,7 @@
 
 <details open>
   <summary><h3>Что выведет код?</h3></summary>
+
 ```go
 defer fmt.Println("Deferred one")
 defer func() {
@@ -32,4 +33,5 @@ go func() {
 }()
 fmt.Println("Ending")
 ```
+
 </details>
