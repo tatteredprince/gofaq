@@ -18,4 +18,20 @@ str[0] = "R"            // в Go можно менять строки?
 fmt.Println(str)
 ```
 
+```go
+str := "Hello, 世界"
+fmt.Println(len(str))
+for i, c := range str {
+  fmt.Printf("index %d character %c\n", i, c)
+}
+```
+
+```go
+chars := make([]byte, len(str))  // chars := []byte(str)
+fmt.Println(copy(chars, str))
+for i, c := range chars {
+  fmt.Printf("index %d character %c\n", i, c)
+}
+```
+
 </details>
