@@ -27,6 +27,7 @@ for i, c := range str {
 ```
 
 ```go
+str := "Hello, 世界"
 chars := make([]byte, len(str))  // chars := []byte(str)
 fmt.Println(copy(chars, str))
 for i, c := range chars {
