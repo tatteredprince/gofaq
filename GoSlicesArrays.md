@@ -113,9 +113,9 @@ fullSliceExpr  := func(low, high, max int) {
 	s1 = append(s1, 6, 7)
 	fmt.Println(s, s1)
 }
-fullSliceExpr (1, 3, 3)
-fullSliceExpr (1, 3, 4)
-fullSliceExpr (1, 3, 5)
+fullSliceExpr(1, 3, 3)
+fullSliceExpr(1, 3, 4)
+fullSliceExpr(1, 3, 5)
 ```
 
 ```go
