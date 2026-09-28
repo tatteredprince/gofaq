@@ -107,6 +107,31 @@ fmt.Println(s)
 ```
 
 ```go
+fullSliceExpr  := func(low, high, max int) {
+	s := []int{1, 2, 3, 4, 5}
+	s1 := s[low:high:max]
+	s1 = append(s1, 6, 7)
+	fmt.Println(s, s1)
+}
+fullSliceExpr (1, 3, 3)
+fullSliceExpr (1, 3, 4)
+fullSliceExpr (1, 3, 5)
+```
+
+```go
+fullSliceExpr := func(low, high, max int) {
+	s := []int{1, 2, 3, 4, 5}
+	s1 := s[low:high:max]
+	s1 = append(s1, 6)
+	s1 = append(s1, 7)
+	fmt.Println(s, s1)
+}
+fullSliceExpr(1, 3, 3)
+fullSliceExpr(1, 3, 4)
+fullSliceExpr(1, 3, 5)
+```
+
+```go
 s := []int{1, 2, 3}
 func(s []int) {          // переменные передаются по ссылке или по значению?
 	s[0] *= 2
