@@ -40,6 +40,13 @@ defer f()
 ```
 
 ```go
+f := func(str string) { fmt.Printf("Defer %s\n", str) }
+defer f("one")
+defer f("two")
+defer f("three")
+```
+
+```go
 defer fmt.Println("Deferred one")
 defer fmt.Println("Deferred two")
 fmt.Println("Starting")
