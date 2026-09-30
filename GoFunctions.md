@@ -26,6 +26,20 @@
   <summary><h3>Что выведет код?</h3></summary>
 
 ```go
+var i, v int
+f := func() {
+  i++
+  fmt.Printf("Defer #%d: %d\n", i, v)
+}
+v++
+defer f()
+v++
+defer f()
+v++
+defer f()
+```
+
+```go
 defer fmt.Println("Deferred one")
 defer fmt.Println("Deferred two")
 fmt.Println("Starting")
