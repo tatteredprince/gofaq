@@ -26,10 +26,10 @@ fmt.Println(m)
 ```
 
 ```go
-m := map[string][]int{"s": []int{1, 2, 3}}
-e := new(m["s"][0])
-e = &m["s"][0]
-*e = 0
+m := map[string][]int{"s": []int{1, 0, 3}}
+e := new(m["s"][1])
+e = &m["s"][1]
+*e = 2
 fmt.Println(m)
 ```
 
