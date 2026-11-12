@@ -42,4 +42,21 @@ m2 := map[string]User{"": {}}
 m2[""].Name = "Kevin"
 ```
 
+```go
+package main
+
+type User struct {
+	Name string
+}
+
+func (u *User) SetUsername(name string) {
+	u.Name = name
+}
+
+func main() {
+	m := map[string]User{"admin": {"John"}}
+	m["admin"].SetUsername("Alexander")
+}
+```
+
 </details>
