@@ -34,6 +34,14 @@ fmt.Println(t, d)
 ```
 
 ```go
+f := func() [3]int {
+	return [3]int{1, 2, 10}
+}
+f()[2] = 3
+f() = [3]int{1, 2, 3}
+```
+
+```go
 f := func() []int {
 	return []int{1, 2, 10}
 }
