@@ -34,6 +34,13 @@ fmt.Println(t, d)
 ```
 
 ```go
+f := func() []int {
+	return []int{1, 2, 3}
+}
+f()[:] = []int{4, 5, 6}
+```
+
+```go
 package main
 
 import "fmt"
