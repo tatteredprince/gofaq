@@ -26,24 +26,23 @@
   <summary><h3>Что выведет код?</h3></summary>
 
 ```go
-t := &time.Now().Day()
-m := &max(1, 2)
-fmt.Println(t, m)
-```
-
-```go
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func myfunc() int {
 	return 1
 }
 
 func main() {
+	t := &time.Now()
+	m := &max(1, 2)
 	f1 := myfunc
 	f2 := &myfunc
-	fmt.Println(f1(), f2())
+	fmt.Println(t, m, f1(), f2())
 }
 ```
 
