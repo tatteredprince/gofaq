@@ -17,7 +17,7 @@
 <details open>
   <summary><h3>Что выведет код?</h3></summary>
 
-```
+```go
 m := map[string]int{"a": 1, "b": 0, "c": 3}
 elem := new(m["b"])
 elem = &m["b"]
