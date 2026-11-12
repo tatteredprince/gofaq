@@ -22,7 +22,6 @@ m := map[string]int{"a": 1, "b": 0, "c": 3}
 elem := new(m["b"])
 elem = &m["b"]
 *elem = 2
-fmt.Println(m)
 ```
 
 ```go
@@ -33,7 +32,6 @@ type User struct {
 m := map[string]User{"admin": {"John", "john@email.com"}, "accountant": {"James", "james@enmail.com"}}
 m["admin"].Name = "Alexander"
 m["admin"].Email = "alexander@email.com"
-fmt.Println(m)
 ```
 
 ```go
