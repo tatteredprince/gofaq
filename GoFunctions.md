@@ -34,6 +34,30 @@ fmt.Println(t, d)
 ```
 
 ```go
+package main
+
+import "fmt"
+
+type User struct {
+	Name string
+}
+
+func (u User) GetUser() User {
+	return u
+}
+
+func (u *User) GetUserPtr() *User {
+	return u
+}
+func main() {
+	u1, u2 := User{"John"}, User{"Alexander"}
+	u1.GetUser().Name = "Taylor"
+	u2.GetUserPtr().Name = "James"
+	fmt.Println(u1, u2)
+}
+```
+
+```go
 var i, v int
 f := func() {
   i++
