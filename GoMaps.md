@@ -27,11 +27,9 @@ elem = &m["b"]
 ```go
 type User struct {
 	Name  string
-	Email string
 }
-m := map[string]User{"admin": {"John", "john@email.com"}, "accountant": {"James", "james@enmail.com"}}
+m := map[string]User{"admin": {"John"}, "accountant": {"James"}}
 m["admin"].Name = "Alexander"
-m["admin"].Email = "alexander@email.com"
 ```
 
 ```go
