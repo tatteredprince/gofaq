@@ -31,7 +31,7 @@ m := &max(1, 2)
 fmt.Println(t, m)
 ```
 
-```
+```go
 package main
 
 import "fmt"
