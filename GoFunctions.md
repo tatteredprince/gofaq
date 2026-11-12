@@ -35,9 +35,10 @@ fmt.Println(t, d)
 
 ```go
 f := func() []int {
-	return []int{1, 2, 3}
+	return []int{1, 2, 10}
 }
-f()[:] = []int{4, 5, 6}
+f()[2] = 3
+f()[:] = []int{1, 2, 3}
 ```
 
 ```go
