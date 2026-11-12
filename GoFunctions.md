@@ -31,6 +31,22 @@ m := &max(1, 2)
 fmt.Println(t, m)
 ```
 
+```
+package main
+
+import "fmt"
+
+func myfunc() int {
+	return 1
+}
+
+func main() {
+	f1 := myfunc
+	f2 := &myfunc
+	fmt.Println(f1(), f2())
+}
+```
+
 ```go
 var i, v int
 f := func() {
