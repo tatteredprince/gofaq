@@ -26,6 +26,12 @@
   <summary><h3>Что выведет код?</h3></summary>
 
 ```go
+t := &time.Now().Day()
+m := &max(1, 2)
+fmt.Println(t, m)
+```
+
+```go
 var i, v int
 f := func() {
   i++
