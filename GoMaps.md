@@ -27,6 +27,17 @@ fmt.Println(m)
 
 ```go
 type User struct {
+	Name  string
+	Email string
+}
+m := map[string]User{"admin": {"John", "john@email.com"}, "accountant": {"James", "james@enmail.com"}}
+m["admin"].Name = "Alexander"
+m["admin"].Email = "alexander@email.com"
+fmt.Println(m)
+```
+
+```go
+type User struct {
 	Name string
 }
 m1 := map[string]*User{"": {}}
