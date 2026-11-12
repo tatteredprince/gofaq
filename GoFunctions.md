@@ -41,6 +41,13 @@ f()[:] = []int{4, 5, 6}
 ```
 
 ```go
+f := func() map[string]int {
+	return map[string]int{"one": 1, "two": 2, "three": 3}
+}
+f() = map[string]int{"four": 4, "five": 5, "six": 6}
+```
+
+```go
 package main
 
 import "fmt"
