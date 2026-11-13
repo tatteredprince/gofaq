@@ -52,6 +52,14 @@ deduce(f2)
 
 ```go
 type CustomError string
+var err CustomError
+var v any = err
+fmt.Println(v == nil)
+fmt.Println(v.(CustomError) == "")
+```
+
+```go
+type CustomError string
 
 func (e CustomError) Error() string {  // что выведется если не определять этот метод?
 	return string(e)
