@@ -24,10 +24,10 @@ fmt.Println(err.Error())  // какое значение имеет err по у�
 var f1, f2 func() int = func() int { return 1 }, nil
 execute := func(f func() int) {
 	if f == nil { // может ли тип функции принимать значение nil?
-		fmt.Println("execute: nil")
+		fmt.Println("nil")
 		return
 	}
-	fmt.Println("execute: func() int", f())
+	fmt.Println("func =", f())
 }
 execute(nil)
 execute(f1)
