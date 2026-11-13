@@ -54,6 +54,17 @@ f()[:] = []int{1, 2, 3}
 ```
 
 ```go
+f1 := func() []int {
+	return []int{1, 2, 3}
+}
+f2 := func() [3]int {
+	return [3]int{1, 2, 3}
+}
+s1, s2 := f1()[:], f2()[:]
+fmt.Println(s1, s2)
+```
+
+```go
 f := func() map[string]int {
 	return map[string]int{"one": 1, "two": 2, "three": 10}
 }
