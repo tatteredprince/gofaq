@@ -38,11 +38,11 @@ execute(f2)
 var f1, f2 func() int = func() int { return 1 }, nil
 deduce := func(v any) {
 	if v == nil { // когда интерфейс равен nil?
-		fmt.Println("deduce: nil")
+		fmt.Println("nil")
 		return
 	}
 	if _, ok := v.(func() int); ok {
-		fmt.Println("deduce: func() int", v.(func() int)()) // что произойдет при разименовании nil-значения?
+		fmt.Println("v =", v.(func() int)()) // что произойдет при разименовании nil-значения?
 	}
 }
 deduce(nil)
