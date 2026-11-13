@@ -182,4 +182,12 @@ for i, v := range &a {  // итератор range по ссылке на мас�
 fmt.Println(a, b)
 ```
 
+```go
+s1, s2 := []int{1, 2, 3}, []int{4, 5, 6}
+fmt.Println(s1, s2)
+a1, a2 := (*[3]int)(s1), *(*[3]int)(s2)
+a1[2], a2[2] = 8, 9
+fmt.Println(s1, s2)
+```
+
 </details>
