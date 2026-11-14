@@ -170,4 +170,22 @@ ch <- 123
 time.Sleep(1 * time.Second)
 ```
 
+```go
+i := 1
+ticker := time.Tick(1 * time.Second)
+now := time.Now()
+fmt.Println("start", now)
+for now = range ticker {
+	fmt.Println("tick1", now)
+	if i%3 == 0 {
+		break
+	}
+	i++
+}
+for ; i%5 != 0; now = <-ticker {
+	fmt.Println("tick2", now)
+	i++
+}
+```
+
 </details>
