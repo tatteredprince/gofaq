@@ -131,4 +131,30 @@ for i := range 10 {
 }
 ```
 
+```go
+worker := func(ch chan string, ctx context.Context) {
+	for {
+		select {
+		case v := <-ch:
+			fmt.Println("read from channel:", v)
+		case <-ctx.Done():
+			fmt.Println("done working")
+			return
+		// что будет если добавить условие default?
+		// что будет если в default добавить return?
+		}
+		fmt.Println("do some work")
+		time.Sleep(200 * time.Millisecond)
+	}
+}
+ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+defer cancel()
+ch := make(chan string)
+go worker(ch, ctx)
+ch <- "start working"
+ch <- "continue work"
+time.Sleep(3 * time.Second)
+fmt.Println("the end")
+```
+
 </details>
