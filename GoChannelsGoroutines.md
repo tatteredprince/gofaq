@@ -157,4 +157,17 @@ time.Sleep(3 * time.Second)
 fmt.Println("the end")
 ```
 
+```go
+worker := func(ch <-chan int) {
+	for v := range ch {
+		fmt.Println("read from channel:", v)
+	}
+	close(ch) // можно ли закрыть канал для чтения?
+}
+ch := make(chan int)
+go worker(ch)
+ch <- 123
+time.Sleep(1 * time.Second)
+```
+
 </details>
